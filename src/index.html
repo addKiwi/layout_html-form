@@ -11,7 +11,172 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
+    <form method="post" action="https://mate-academy-form-lesson.herokuapp.com/create-application">
+      <fieldset>
+        <legend>Personal information</legend>
+
+        <div class="form-field">
+          <label for="surname">Surname:</label>
+          <input
+            type="text"
+            name="surname"
+            id="surname"
+            autocomplete="off"
+          >
+        </div>
+        <div class="form-field">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            autocomplete="off"
+          >
+        </div>
+        <div class="form-field">
+          <label for="number">How old are You?</label>
+          <input
+            type="number"
+            min="1"
+            max="100"
+            name="age"
+            value="12"
+            id="number"
+            autocomplete="off"
+          >
+        </div>
+        <div class="form-field">
+          <label for="date">Full date of birth:</label>
+          <input
+            type="date"
+            name="date"
+            id="date"
+          >
+        </div>
+        <div class="form-field">
+          <label for="term">I accept the term of the agreement</label>
+          <input
+            type="checkbox"
+            name="term"
+            id="term"
+            autocomplete="off"
+          >
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Registration</legend>
+        <div class="form-field">
+          <label for="email">E-mail:</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            autocomplete="off"
+            placeholder="email@example.com"
+          >
+        </div>
+        <div class="form-field">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="off"
+          >
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>An interesting fact about you!</legend>
+        <div class="form-field">
+          <label for="cats">Do you love cats?</label>
+          <label>
+            <input
+              type="radio"
+              name="cats"
+              autocomplete="off"
+              id="cats"
+            > Yes
+          </label>
+          <label>
+            <input
+              type="radio"
+              autocomplete="off"
+              name="cats"
+            > No
+          </label>
+        </div>
+        <div class="form-field">
+          <label for="color">What is your favorite color?</label>
+          <input
+            type="color"
+            autocomplete="off"
+            name="color"
+            id="color"
+          >
+        </div>
+        <div class="form-field">
+          <label for="time">What time do you go to bed?</label>
+          <input
+            type="time"
+            autocomplete="off"
+            name="time"
+            id="time"
+            step="2"
+          >
+        </div>
+        <div class="form-field">
+          <label for="cars">What are your favorite brand of cars?</label>
+          <select
+            name="cars"
+            autocomplete="off"
+            id="cars"
+            multiple
+          >
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Lada">Lada</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="rate">How do you rate our work?</label>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            step="5"
+            name="rate"
+            autocomplete="off"
+            value="0"
+            id="rate"
+          >
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Additional info:</legend>
+        <div class="form-field">
+          <label for="comments">Comments:</label>
+          <textarea
+            name="comments"
+            id="comments"
+            autocomplete="off"
+            cols="30"
+            rows="2"
+          ></textarea>
+        </div>
+        <div class="form-field">
+          <label for="recomend">Would you recomend us?</label>
+          <select
+            name="recomend"
+            id="recomend"
+            autocomplete="off"
+          >
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
